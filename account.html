@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/dd8503b67c.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>food blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="login.js"></script>
+        <script type="module" src="firebase.js"></script>
+        <script type="module" src="cookie.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <div id="logo" class="header">
+                <h1><a href="index.html">FoodBook</a></h1>
+            </div>
+            <!--Searching dose not work because I did not have enough time to implement it before the due date-->
+            <div id="search" class="header">
+                <form>
+                    <input type="search" id="searchBar">
+                    <input type="submit" id="searchBTN">
+                </form>
+            </div>
+            <div id="icons" class="header">
+                <a href="account.html"><i class="fa-solid fa-user" id="user"></i></a>
+                <!--Settings is not there because I did not have enough time to make it before the due date
+                In settings you could change privacy settings, remove your account, change your email and password, etc.
+                -->
+                <a href="#"><i class="fa-solid fa-gear" id="settings"></i></a>
+            </div>
+            <div id="not-loggedIn" class="hidden">
+                    <div id="login-screen" class="">
+                        <h2>Login</h2>
+                        <form onsubmit="" id="login-form">
+                            <label for="email">Email:</label><input type="email" name="email"><br>
+                            <label for="password">Password:</label><input type="password" name="password"><br>
+                            <p id="loginError"></p>
+                            <input type="button" id="loginSubmit" value="Login"> <input type="button" id="switchToSignup" value="creat an account">
+                        </form>
+                    </div>
+                    <div id="signup-screen" class="hidden">
+                        <h2>Signup</h2>
+                        <form onsubmit="" id="signup-form">
+                            <label for="email">Email:</label><input type="email" name="email"><br>
+                            <label for="password">Password:</label><input type="password" name="password"><br>
+                            <label for="username">UserName:</label><input type="text" name="username"><br>
+                            <label for="profilePic">Profile Picture:</label><input type="file" name="profilePic"><br>
+                            <p id="signupError"></p>
+                            <input type="button" id="signupSubmit" value="Signup"> <input type="button" id="switchToLogin" value="already have an account">
+                        </form>
+                    </div>
+                </div>
+                <div id="loggedIn" class="accPadding displayAccount">
+                    <div id="accountInfo" class="main displayContentLeft">
+                        <img id="userPic" alt="user Pic" src="https://pbs.twimg.com/media/EKM9pjTVAAIudzZ.jpg">
+                        <div id="userInfo">
+                            <h3 id="userName">KeenBean</h3>
+                            <p id="userDesc">im a bean</p>
+                    <a href="https://koeh1124.github.io/portfolio" target="#">Check out my website!</a>
+                    <a href="https://github.com/Koeh1124/portfolioRepo" target="#">Check out my portfolio!</a>
+                        </div>
+                        <p id="friendNum">Friends: 97</p>
+                        <a href="post.html"><button id="createBTN">Create a Post</button></a>
+                        <button id="logout">Logout</button>
+                    </div>
+                    <div id="accountOptions">
+                        <!--This options menue is non functional and is a place holder that will allow the user to change their account settings-->
+                        <form>
+                            <label for="changePic">Change Profile Picture: </label><input type="file" name="changePic"><br>
+                            <label for="changeUser">Change User Name:</label><input type="text" name="changeUser"><br>
+                            <label for="changePass">Change Password:</label><input type="text" name="changePass"><br>
+                            <input type="button" id="saveAccountSettings" value="Save Changes">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

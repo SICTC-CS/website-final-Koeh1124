@@ -1,0 +1,1494 @@
+/*header and contents*/
+/*
+colors:
+Dark Spring Green - #2c6e49
+Middle Green - #4c956c
+Light Yellow - #fefee3
+Glossy Grape - #af90a9
+black coffee - #483d3f
+*/
+/*tab*/
+
+@media(min-width:750px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    html body{
+        display: grid;
+        overflow-y: hidden;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 4;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        background-color: #2c6e49;
+    }
+    .displayContent{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 4;
+    }
+    .displaySplitLeft{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 4;
+    }
+    .displaySplitRight{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 4;
+    }
+    .hideContent{
+        display: none;
+    }
+    /*Header Styles*/
+    .header{
+        background-color: #483d3f;
+    }
+    #logo{
+        height: 5vh;
+        grid-column: 1;
+        grid-row: 1;
+        float: left;
+        width: 100%;
+        padding-top: 0;
+    }
+    #logo a{
+        text-decoration: none;
+        padding-top: 0;
+        color: #fefee3;
+        margin-left: 10%;
+    }
+    #logo a:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #search{
+        display: grid;
+        padding-top: 0;
+        height: 3vh;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+        padding-bottom: 5px;
+    }
+    #search form{
+        display: flex;
+        justify-content: space-around;
+        float:none;
+        margin-top: 0;
+    }
+    #searchBar{
+        width: 74vw;
+        margin-right: 0;
+        background-color: #fefee3;
+    }
+    #searchBTN{
+        background-color: #fefee3;
+    }
+    #icons{
+        height: 5vh;
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-right: 20%;
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+    #icons *{
+        color: #fefee3;
+    }
+    #icons *:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #innerNavBar{
+        background-color: #483d3f;
+        display: flex;
+        justify-content: space-around;
+        height: 4vh;
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #innerNavBar button{
+        font-size: .75em;
+        margin-top: 2px;
+        width: 40vw;
+        height: 3vh;
+        margin-bottom: 5px;
+        background-color: #fefee3;
+    }
+    /*main styles*/
+    #content{
+        padding-top: 0;
+        position: relative;
+        background-color: #2c6e49;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+
+    #content::-webkit-scrollbar{
+        display: none;
+    }
+    /*post styles*/
+    .hidden{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+    
+    .normal-post{
+        overflow-y:hidden;
+        float:left;
+        position:relative;
+        position: relative;
+        border-radius: 20px;
+        margin: 1vh;
+        background-color: #4c956c;
+        height: fit-content;
+        padding: 1%;
+    }
+    
+    .expanded-post{
+        overflow-y: hidden;
+        border-radius: 20px;
+        margin: 1%;
+        background-color: #4c956c;
+        height:fit-content;
+        padding: 1%;
+    }
+    
+    .normal-content{
+        display: flex;
+        justify-content: space-around;
+    }
+    .normal-content *{
+        padding: 5px;
+    }
+    .normal-content .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    
+    .expanded-content{
+    
+    }
+    .expanded-top{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .expanded-top .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    .expanded-top .contentInfo{
+        font-size: 1.5em;
+    }
+    .expanded-bottom{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .instructions{
+        width: 50%;
+    }
+    .ingredients{
+        width: 50%;
+    }
+    
+    .switch-content-view{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: none;
+        border-radius: 5px;
+        color:#fefee3;
+        background-color: #483d3f;
+    }
+    .switch-content-view:hover{
+        background-color: #483d3f;
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .interactions{
+        color: #fefee3;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+    .interactions *{
+        margin-right: 5px;
+    }
+    .interactions *:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .header{
+        height: 4vh;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .main{
+        min-height: 100vh;
+    }
+    /*friends styles*/
+    #friends{
+        background-color: #2c6e49;
+    }
+    #friends *{
+        background-color: #4c956c;
+    }
+    #friendSearch{
+        height: 10vh;
+        padding: 0;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border-radius: 10px;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    #friendSearch *{
+        margin-top: 1vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        text-align: center;
+        width: auto;
+    }
+    #friendSearchBar{
+        background-color: #fefee3;
+    }
+    #friendSearchBTN{
+        background-color: #fefee3;
+    }
+    table{
+        position: relative;
+        height: 75vh;
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        background-color: #4c956c;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 0;
+        position: relative;
+        overflow-y: scroll;
+    }
+    table::-webkit-scrollbar{
+        display: none;
+    }
+    tr{
+        margin-top: 10px;
+        border-radius: 1px;
+    }
+    .friend{
+        width: 25vw;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .friend p{
+        margin-left: .6em;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1.8em;
+    }
+    .chat{
+        padding-left: 1vw;
+    }
+    .friendPic{
+        margin-right: 5vw;
+        width: 5vw;
+        border-radius: 10px;
+    }
+    .notification{
+        padding-left: 3vw;
+    }
+    table td{
+        align-items: center;
+    }
+    /*account styles*/
+    #account{
+        background-color: #2c6e49;
+    }
+    #account *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #userInfo a{
+        margin: 0;
+        text-decoration: none;
+        color: #fefee3;
+        padding-left: 15px;
+    }
+    #userInfo a:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #userPic{
+        border-radius: 10px;
+        margin-right: auto;
+        margin-top: 15px;
+        height: 40vw;
+        width: 40vw;
+    }
+    #friendNum{
+        padding-left: 15px;
+    }
+    #userName{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #userDesc{
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    /*account page*/
+    .displayAccount{
+        grid-column: 1/4;
+        grid-row-start: 3;
+        grid-row-end: 3
+    }
+    .loginPadding{
+        padding: 2vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        margin-bottom: 40vh;
+        padding-bottom: 10vh;
+        margin-top: 10vh;
+    }
+    .accPadding{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-bottom: 10vw;
+        padding-top: 0;
+    }
+    #mainAccount{
+        background-color: #2c6e49;
+        height: 100vh;
+        position: relative;
+    }
+    #not-loggedIn{
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #not-loggedIn form{
+        background-color: #fefee3;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+    #login-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 4vh;
+    }
+    #signup-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 0;
+    }
+    #loginError{
+        background-color: #fefee3;
+    }
+    #not-loggedIn form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    #loggedIn{
+        display: flex;
+        justify-content: space-between;
+    }
+    #accountInfo *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #createBTN{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #createBTN{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #createBTN:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #logout{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #logout:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #accountInfo{
+        margin-right: 5vw;
+        margin-top: 5vh;
+    }
+    #accountOptions{
+        border-radius: 10px;
+        margin-top: 5vh;
+        height: 80vh;
+        width: 50vw;
+        background-color: #4c956c;
+    }
+    #accountOptions form{
+        background-color: #fefee3;
+        height: 80%;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #accountOptions form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    /*Post page*/
+    #postCreater{
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: 85vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80vw;
+        border-radius: 10px;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+        background-color: #4c956c;
+        overflow-y: scroll;
+        padding: 5vw;
+    }
+    #postCreater::-webkit-scrollbar{
+        display: none;
+    }
+    #postMaker{
+        background-color: #fefee3;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    #postMaker *{
+        margin: 5px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+}
+
+/*phone*/
+@media(max-width:750px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    html body{
+        overflow-y: hidden;
+    }
+    main{
+        background-color: #2c6e49;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 4;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+    }
+    .displayContent{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 4;
+    }
+    .displaySplitLeft{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 4;
+    }
+    .displaySplitRight{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 4;
+    }
+    .hideContent{
+        display: none;
+    }
+    /*Header Styles*/
+    .header{
+        background-color: #483d3f;
+    }
+    #logo{
+        height: 5vh;
+        grid-column: 1;
+        grid-row: 1;
+        float: left;
+        width: 100%;
+        padding-top: 0;
+    }
+    #logo a{
+        text-decoration: none;
+        padding-top: 0;
+        color: #fefee3;
+        margin-left: 10%;
+    }
+    #logo a:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #search{
+        padding-top: 0;
+        height: 3vh;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2;
+    }
+    #search form{
+        display: flex;
+        justify-content: space-around;
+        float:none;
+        margin-top: 0;
+    }
+    #searchBar{
+        width: 70vw;
+        margin-right: 0;
+        background-color: #fefee3;
+    }
+    #searchBTN{
+        background-color: #fefee3;
+    }
+    #icons{
+        height: 5vh;
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-right: 20%;
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+    #icons *{
+        color: #fefee3;
+    }
+    #icons *:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #innerNavBar{
+        background-color: #483d3f;
+        display: flex;
+        justify-content: space-around;
+        height: 4vh;
+        grid-row: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #innerNavBar button{
+        font-size: .75em;
+        margin-top: 2px;
+        width: 40vw;
+        height: 3vh;
+        margin-bottom: 5px;
+        background-color: #fefee3;
+    }
+    /*main styles*/
+    #content{
+        padding-top: 0;
+        position: relative;
+        background-color: #2c6e49;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+
+    #content::-webkit-scrollbar{
+        display: none;
+    }
+    /*post styles*/
+    .hidden{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+    }
+    
+    .normal-post{
+        overflow-y:hidden;
+        float:left;
+        position:relative;
+        position: relative;
+        border-radius: 20px;
+        margin: 1vh;
+        background-color: #4c956c;
+        height: fit-content;
+        padding: 1%;
+    }
+    
+    .expanded-post{
+        overflow-y: hidden;
+        border-radius: 20px;
+        margin: 1%;
+        background-color: #4c956c;
+        height:fit-content;
+        padding: 1%;
+    }
+    
+    .normal-content{
+        display: flex;
+        justify-content: space-around;
+    }
+    .normal-content *{
+        padding: 5px;
+    }
+    .normal-content .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    
+    .expanded-content{
+    
+    }
+    .expanded-top{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .expanded-top .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    .expanded-top .contentInfo{
+        font-size: 1.5em;
+    }
+    .expanded-bottom{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .instructions{
+        width: 50%;
+    }
+    .ingredients{
+        width: 50%;
+    }
+    
+    .switch-content-view{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: none;
+        border-radius: 5px;
+        color:#fefee3;
+        background-color: #483d3f;
+    }
+    .switch-content-view:hover{
+        background-color: #483d3f;
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .interactions{
+        color: #fefee3;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+    .interactions *{
+        margin-right: 5px;
+    }
+    .interactions *:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .header{
+        height: 4vh;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .main{
+        min-height: 100vh;
+    }
+    /*friends styles*/
+    #friends{
+        background-color: #2c6e49;
+    }
+    #friends *{
+        background-color: #4c956c;
+    }
+    #friendSearch{
+        height: 10vh;
+        padding: 0;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        border-radius: 10px;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    #friendSearch *{
+        margin-top: 1vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        text-align: center;
+        width: auto;
+    }
+    #friendSearchBar{
+        background-color: #fefee3;
+    }
+    #friendSearchBTN{
+        background-color: #fefee3;
+    }
+    table{
+        position: relative;
+        height: 75vh;
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        background-color: #4c956c;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 0;
+        position: relative;
+        overflow-y: scroll;
+    }
+    table::-webkit-scrollbar{
+        display: none;
+    }
+    tr{
+        margin-top: 8px;
+        border-radius: 1px;
+    }
+    .friend{
+        width: 20vw;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .friend p{
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1.2em;
+    }
+    .chat{
+        padding-left: 1vw;
+    }
+    .friendPic{
+        margin-right: 5px;
+        width: 5vw;
+        border-radius: 4px;
+    }
+    .notification{
+        padding-left: 3vw;
+    }
+    table td{
+        align-items: center;
+    }
+    /*account styles*/
+    #account{
+        background-color: #2c6e49;
+    }
+    #account *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #userInfo a{
+        margin: 0;
+        text-decoration: none;
+        color: #fefee3;
+        padding-left: 15px;
+    }
+    #userInfo a:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #userPic{
+        border-radius: 10px;
+        margin-right: auto;
+        margin-top: 15px;
+        height: 40vw;
+        width: 40vw;
+    }
+    #friendNum{
+        padding-left: 15px;
+    }
+    #userName{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #userDesc{
+        padding-left: 15px;
+        margin-left: 0;
+    }
+
+    /*account page*/
+    .displayAccount{
+        grid-column: 1/4;
+        grid-row-start: 3;
+        grid-row-end: 3
+    }
+    .loginPadding{
+        padding: 2vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        margin-bottom: 40vh;
+        padding-bottom: 10vh;
+        margin-top: 10vh;
+    }
+    .accPadding{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-bottom: 10vw;
+        padding-top: 0;
+    }
+    #mainAccount{
+        background-color: #2c6e49;
+        height: 100vh;
+        position: relative;
+    }
+    #not-loggedIn{
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #not-loggedIn form{
+        background-color: #fefee3;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+    #login-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 4vh;
+    }
+    #signup-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 0;
+    }
+    #loginError{
+        background-color: #fefee3;
+    }
+    #not-loggedIn form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    #loggedIn{
+        display: flex;
+        justify-content: space-between;
+    }
+    #accountInfo *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #createBTN{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #createBTN:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #logout{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #logout:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #accountInfo{
+        width: 40vw;
+        margin-right: 5vw;
+        margin-top: 5vh;
+    }
+    #accountOptions{
+        border-radius: 10px;
+        margin-top: 5vh;
+        height: 80vh;
+        width: 50vw;
+        background-color: #4c956c;
+    }
+    #accountOptions form{
+        background-color: #fefee3;
+        height: 80%;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #accountOptions form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    /*Post page*/
+    #postCreater{
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: 85vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80vw;
+        border-radius: 10px;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+        background-color: #4c956c;
+        overflow-y: scroll;
+        padding: 5vw;
+    }
+    #postCreater::-webkit-scrollbar{
+        display: none;
+    }
+    #postMaker{
+        background-color: #fefee3;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    #postMaker *{
+        margin: 5px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+}
+/*computer*/
+@media(min-width:1200px){
+    *{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    html body{
+        overflow-y: hidden;
+        display: grid;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-row: 2;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
+        height: 100vh;
+        background-color: #2c6e49;
+    }
+    .hideContent{
+        display: inline;
+    }
+    #innerNavBar{
+        display: none;
+    }
+    /*Header Styles*/
+    .header{
+        background-color: #483d3f;
+    }
+    #logo{
+        grid-column: 1;
+        grid-row: 1;
+        padding-top: 6px;
+        float: left;
+        width: 100%;
+    }
+    #logo a{
+        text-decoration: none;
+        padding-top: 0;
+        color: #fefee3;
+        margin-left: 10%;
+    }
+    #logo a:hover{
+        color: #af90a9;
+    }
+    #search{
+        padding-top: 12px;
+        height: 5vh;
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #search form{
+        display: flex;
+        justify-content: space-around;
+        float:none;
+        margin-top: 0;
+    }
+    #searchBar{
+        width: 30vw;
+        background-color: #fefee3;
+    }
+    #searchBTN{
+        background-color: #fefee3;
+    }
+    #icons{
+        padding-left: 50%;
+        padding-right: 20%;
+        grid-column: 3;
+        grid-row: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+    #icons *{
+        color: #fefee3;
+    }
+    #icons *:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    
+    /*main cats styles*/
+    #account{
+        grid-column: 1;
+        grid-row: 2;
+    
+    }
+    #content{
+        padding-top: 0;
+        position: relative;
+        background-color: #2c6e49;
+        grid-column: 2;
+        grid-row: 2;
+        height: 40vh;
+        overflow-y: scroll;
+    }
+    #content::-webkit-scrollbar{
+        display: none;
+    }
+    #friends{
+        width: 25vw;
+        grid-column: 3;
+        grid-row: 2;
+        padding-top: 0;
+        background-color: #2c6e49;
+    }
+
+    
+    /*post styles*/
+    .hidden{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .normal-post{
+        overflow-y:hidden;
+        float:left;
+        position:relative;
+        position: relative;
+        border-radius: 20px;
+        margin: 1vh;
+        background-color: #4c956c;
+        height: fit-content;
+        padding: 1%;
+    }
+    
+    .expanded-post{
+        overflow-y: hidden;
+        border-radius: 20px;
+        margin: 1%;
+        background-color: #4c956c;
+        height:fit-content;
+        padding: 1%;
+    }
+    
+    .normal-content{
+        display: flex;
+        justify-content: space-around;
+    }
+    .normal-content *{
+        padding: 5px;
+    }
+    .normal-content .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    
+    .expanded-content{
+    
+    }
+    .expanded-top{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .expanded-top .contentImg{
+        border-radius: 10px;
+        padding-right: 10px;
+        height: 20vw;
+        width: auto;
+    }
+    .expanded-top .contentInfo{
+        font-size: 1.5em;
+    }
+    .expanded-bottom{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    .instructions{
+        width: 50%;
+    }
+    .ingredients{
+        width: 50%;
+    }
+    
+    .switch-content-view{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        border: none;
+        border-radius: 5px;
+        color:#fefee3;
+        background-color: #483d3f;
+    }
+    .switch-content-view:hover{
+        background-color: #483d3f;
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .interactions{
+        color: #fefee3;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 5px;
+    }
+    .interactions *{
+        margin-right: 5px;
+    }
+    .interactions *:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    .header{
+        height: 6vh;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .main{
+        min-height: 94vh;
+    }
+    .flex{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    /*account styles*/
+    #account{
+        background-color: #2c6e49;
+    }
+    #account *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #accountInfo *{
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background-color: #4c956c;
+        border-radius: 10px;
+    }
+    #userInfo{
+        padding-left: 15px;
+    }
+    #userInfo a{
+        margin: 0;
+        text-decoration: none;
+        color: #fefee3;
+        padding-left: 15px;
+    }
+    #userInfo a:hover{
+        color: #af90a9;
+        cursor: pointer;
+    }
+    #userPic{
+        border-radius: 10px;
+        margin-right: auto;
+        margin-top: 15px;
+        height: 20vw;
+        width: 20vw;
+    }
+    #createBTN{
+        width: 100%;
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #createBTN:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #logout{
+        color: #fefee3;
+        text-decoration: none;
+        background-color: #483d3f;
+    }
+    #logout:hover{
+        cursor: pointer;
+        color: #af90a9;
+    }
+    #friendNum{
+        padding-left: 15px;
+    }
+    #userName{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    #userDesc{
+        padding-left: 15px;
+        margin-left: 0;
+    }
+    /*friends styles*/
+    #friends *{
+        background-color: #4c956c;
+    }
+    #friendSearch{
+        height: 10vh;
+        padding: 0;
+        margin-top: 2vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        background-color: #4c956c;
+        border-radius: 10px;
+        padding-left: 0;
+        overflow: hidden;
+    }
+    #friendSearch *{
+        margin-top: 1vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        text-align: center;
+        width: auto;
+    }
+    table{
+        position: relative;
+        height: 80vh;
+        display: block;
+        margin-top: 1vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        background-color: #4c956c;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-top: 0;
+        position: relative;
+        overflow-y: scroll;
+    }
+    table::-webkit-scrollbar{
+        display: none;
+    }
+    tr{
+        margin-top: 10px;
+        border-radius: 1px;
+    }
+    .friend{
+        width: 10vw;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+    }
+    .friend p{
+        margin-left: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 1.2em;
+    }
+    .chat{
+        padding-left: 1vw;
+    }
+    .friendPic{
+        margin-right: 5px;
+        width: 3vw;
+        border-radius: 10px;
+    }
+    .notification{
+        padding-left: 3vw;
+    }
+    table td{
+        align-items: center;
+    }
+    #friendSearchBar{
+        background-color: #fefee3;
+    }
+    #friendSearchBTN{
+        background-color: #fefee3;
+    }
+    /*account page*/
+    .displayAccount{
+        grid-column: 1/4;
+        grid-row-start: 2;
+        grid-row-end: 3
+    }
+    #mainAccount{
+        background-color: #2c6e49;
+        height: 100vh;
+        position: relative;
+    }
+    #not-loggedIn{
+        background-color: #4c956c;
+        border-radius: 10px;
+        padding: 2vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
+        margin-bottom: 20vh;
+        padding-bottom: 10vh;
+        margin-top: 10vh;
+        height: 80vh;
+    }
+    #not-loggedIn form{
+        background-color: #fefee3;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+    #login-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 4vh;
+    }
+    #signup-screen{
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 0;
+    }
+    #loginError{
+        background-color: #fefee3;
+    }
+    #not-loggedIn form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    #loggedIn{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-bottom: 10vw;
+        padding-top: 0;
+    }
+    #accountInfo{
+        margin-top: 5vh;
+    }
+    #accountOptions{
+        border-radius: 10px;
+        margin-top: 5vh;
+        height: 80vh;
+        width: 50vw;
+        background-color: #4c956c;
+    }
+    #accountOptions form{
+        background-color: #fefee3;
+        height: 80%;
+        border-radius: 15px;
+        padding-left: 15px;
+        padding-top: 50px;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    #accountOptions form *{
+        margin: 20px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    /*Post page*/
+    #postCreater{
+        grid-row: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        height: 85vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80vw;
+        border-radius: 10px;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
+        background-color: #4c956c;
+        overflow-y: scroll;
+        padding: 5vw;
+    }
+    #postCreater::-webkit-scrollbar{
+        display: none;
+    }
+    #postMaker{
+        background-color: #fefee3;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    #postMaker *{
+        margin: 5px;
+        border-radius: 5px;
+        padding: 2px;
+    }
+}

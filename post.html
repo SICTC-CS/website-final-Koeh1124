@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/dd8503b67c.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>food blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="app.js"></script>
+        <script type="module" src="firebase.js"></script>
+        <script type="module" src="cookie.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <div id="logo" class="header">
+                <h1><a href="index.html">FoodBook</a></h1>
+            </div>
+            <!--Searching dose not work because I did not have enough time to implement it before the due date-->
+            <div id="search" class="header">
+                <form>
+                    <input type="search" id="searchBar">
+                    <input type="submit" id="searchBTN">
+                </form>
+            </div>
+            <div id="icons" class="header">
+                <a href="account.html"><i class="fa-solid fa-user" id="user"></i></a>
+                <!--Settings is not there because I did not have enough time to make it before the due date
+                In settings you could change privacy settings, remove your account, change your email and password, etc.
+                -->
+                <a href="#"><i class="fa-solid fa-gear" id="settings"></i></a>
+            </div>
+            <div id="postCreater">
+                Create a Post:
+                <form id="postMaker">
+                    <label for="title">Title:</label><input type="text" name="title"><br>
+                    <label for="postImg">Image:</label><input type="file" name="postImg"><br>
+                    <label for="decription">Description</label><input type="text" name="description"><br>
+                    <!--Later I plan on making the ingredient and instrcution lists so you can add and remove the items-->
+                    <div id="ingredientsDiv">
+                        <label>Ingredients:</label>
+                        <ul>
+                            <li><label for="ingredient1">Ingredient1:</label><input type="text" name="ingredient1"><button id="removeIngredient1">X</button><br></li>
+                            <li><label for="ingredient2">Ingredient2:</label><input type="text" name="ingredient2"><button id="removeIngredient2">X</button><br></li>
+                            <li><label for="ingredient3">Ingredient3:</label><input type="text" name="ingredient3"><button id="removeIngredient3">X</button><br></li>
+                        </ul>
+                        <button id="addIngredient">add indredient</button>
+                    </div>
+                    <div id="instructionsDiv">
+                        <label>Instrctuions:</label>
+                        <ul>
+                            <li><label for="instruction1">Instrctuion1:</label><input type="text" name="instruction1"><button id="removeInstrctuion1">X</button><br></li>
+                            <li><label for="instruction2">Instrctuion2:</label><input type="text" name="instruction2"><button id="removeInstrctuion2">X</button><br></li>
+                            <li><label for="instruction3">Instrctuion3:</label><input type="text" name="instruction3"><button id="removeInstrctuion3">X</button><br></li>
+                        </ul>
+                        <button id="addInstrctuion">add instrctuion</button>
+                    </div>
+                    <label for="keyWords">Key Words (seperate with commas):</label><input type="text" name="keyWords">
+                </form>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
