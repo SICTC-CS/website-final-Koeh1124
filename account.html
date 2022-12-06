@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <script src="https://kit.fontawesome.com/dd8503b67c.js" crossorigin="anonymous"></script>
@@ -42,8 +38,8 @@
                     <div id="login-screen" class="">
                         <h2>Login</h2>
                         <form onsubmit="" id="login-form">
-                            <label for="email">Email:</label><input type="email" name="email"><br>
-                            <label for="password">Password:</label><input type="password" name="password"><br>
+                            <label>Email:</label><input type="email" name="email"><br>
+                            <label>Password:</label><input type="password" name="password"><br>
                             <p id="loginError"></p>
                             <input type="button" id="loginSubmit" value="Login"> <input type="button" id="switchToSignup" value="creat an account">
                         </form>
@@ -51,15 +47,15 @@
                     <div id="signup-screen" class="hidden">
                         <h2>Signup</h2>
                         <form onsubmit="" id="signup-form">
-                            <label for="email">Email:</label><input type="email" name="email"><br>
-                            <label for="password">Password:</label><input type="password" name="password"><br>
-                            <label for="username">UserName:</label><input type="text" name="username"><br>
-                            <label for="profilePic">Profile Picture:</label><input type="file" name="profilePic"><br>
+                            <label>Email:</label><input type="email" name="email"><br>
+                            <label>Password:</label><input type="password" name="password"><br>
+                            <label>UserName:</label><input type="text" name="username"><br>
+                            <label>Profile Picture:</label><input type="file" name="profilePic"><br>
                             <p id="signupError"></p>
                             <input type="button" id="signupSubmit" value="Signup"> <input type="button" id="switchToLogin" value="already have an account">
                         </form>
                     </div>
-                </div>
+            </div>
                 <div id="loggedIn" class="accPadding displayAccount">
                     <div id="accountInfo" class="main displayContentLeft">
                         <img id="userPic" alt="user Pic" src="https://pbs.twimg.com/media/EKM9pjTVAAIudzZ.jpg">
@@ -70,20 +66,19 @@
                     <a href="https://github.com/Koeh1124/portfolioRepo" target="#">Check out my portfolio!</a>
                         </div>
                         <p id="friendNum">Friends: 97</p>
-                        <a href="post.html"><button id="createBTN">Create a Post</button></a>
+                        <a href="post.html" id="createBTN">Create a Post</a>
                         <button id="logout">Logout</button>
                     </div>
                     <div id="accountOptions">
                         <!--This options menue is non functional and is a place holder that will allow the user to change their account settings-->
                         <form>
-                            <label for="changePic">Change Profile Picture: </label><input type="file" name="changePic"><br>
-                            <label for="changeUser">Change User Name:</label><input type="text" name="changeUser"><br>
-                            <label for="changePass">Change Password:</label><input type="text" name="changePass"><br>
+                            <label>Change Profile Picture: </label><input type="file" name="changePic"><br>
+                            <label>Change User Name:</label><input type="text" name="changeUser"><br>
+                            <label>Change Password:</label><input type="text" name="changePass"><br>
                             <input type="button" id="saveAccountSettings" value="Save Changes">
                         </form>
                     </div>
                 </div>
-            </div>
         </main>
         <footer>
 
